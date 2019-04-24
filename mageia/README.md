@@ -16,7 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`6`, `latest` (*6/Dockerfile*)](https://github.com/juanluisbaptiste/docker-brew-mageia/blob/f60e1b20a5e31e72b4f49c878160dfa95f49a911/6/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `mageia` does not support the currently selected architecture (`i386`).
 
 # Quick reference
 
@@ -67,7 +69,7 @@ To date, Mageia:
 ## Create a Dockerfile for your container
 
 ```dockerfile
-FROM mageia:6
+FROM i386/mageia:6
 MAINTAINER  "Foo Bar" <foo@bar.com>
 CMD [ "bash" ]
 ```

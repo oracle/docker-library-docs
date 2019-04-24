@@ -16,8 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`6.7.6-community`, `6.7-community`, `lts` (*6.7.6-community/Dockerfile*)](https://github.com/SonarSource/docker-sonarqube/blob/52981f8b2efdbfe18ffacaae687af7a4f05c15a5/6.7.6-community/Dockerfile)
--	[`7.7-community`, `latest` (*7.7-community/Dockerfile*)](https://github.com/SonarSource/docker-sonarqube/blob/52981f8b2efdbfe18ffacaae687af7a4f05c15a5/7.7-community/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `sonarqube` does not support the currently selected architecture (`windows-amd64`).
 
 # Quick reference
 
@@ -62,7 +63,7 @@ This Docker image contains the Community Edition of SonarQube.
 The server is started this way:
 
 ```console
-$ docker run -d --name sonarqube -p 9000:9000 sonarqube
+$ docker run -d --name sonarqube -p 9000:9000 winamd64/sonarqube
 ```
 
 By default you can login as `admin` with password `admin`, see [authentication documentation](https://docs.sonarqube.org/latest/instance-administration/security/).

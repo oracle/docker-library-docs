@@ -16,12 +16,12 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`v2.0.0-alpha4`, `2.0.0-alpha4`, `v2.0`, `2.0`, `faisselle` (*scratch/amd64/Dockerfile*)](https://github.com/containous/traefik-library-image/blob/443c6cee375ea3e2436b117df8535f05e9854385/scratch/amd64/Dockerfile)
+-	[`v2.0.0-alpha4`, `2.0.0-alpha4`, `v2.0`, `2.0`, `faisselle` (*scratch/arm64/Dockerfile*)](https://github.com/containous/traefik-library-image/blob/443c6cee375ea3e2436b117df8535f05e9854385/scratch/arm64/Dockerfile)
 -	[`v2.0.0-alpha4-alpine`, `2.0.0-alpha4-alpine`, `v2.0-alpine`, `2.0-alpine`, `faisselle-alpine` (*alpine/Dockerfile*)](https://github.com/containous/traefik-library-image/blob/443c6cee375ea3e2436b117df8535f05e9854385/alpine/Dockerfile)
--	[`v2.0.0-alpha4-nanoserver`, `2.0.0-alpha4-nanoserver`, `v2.0-nanoserver`, `2.0-nanoserver`, `faisselle-nanoserver`, `v2.0.0-alpha4-nanoserver-sac2016`, `2.0.0-alpha4-nanoserver-sac2016`, `v2.0-nanoserver-sac2016`, `2.0-nanoserver-sac2016`, `faisselle-nanoserver-sac2016` (*windows/Dockerfile*)](https://github.com/containous/traefik-library-image/blob/443c6cee375ea3e2436b117df8535f05e9854385/windows/Dockerfile)
--	[`v1.7.10`, `1.7.10`, `v1.7`, `1.7`, `maroilles`, `latest` (*scratch/amd64/Dockerfile*)](https://github.com/containous/traefik-library-image/blob/07de2d05953a9144a717d66a847991c0fc200cdf/scratch/amd64/Dockerfile)
+-	[`v1.7.10`, `1.7.10`, `v1.7`, `1.7`, `maroilles`, `latest` (*scratch/arm64/Dockerfile*)](https://github.com/containous/traefik-library-image/blob/07de2d05953a9144a717d66a847991c0fc200cdf/scratch/arm64/Dockerfile)
 -	[`v1.7.10-alpine`, `1.7.10-alpine`, `v1.7-alpine`, `1.7-alpine`, `maroilles-alpine`, `alpine` (*alpine/Dockerfile*)](https://github.com/containous/traefik-library-image/blob/07de2d05953a9144a717d66a847991c0fc200cdf/alpine/Dockerfile)
--	[`v1.7.10-nanoserver`, `1.7.10-nanoserver`, `v1.7-nanoserver`, `1.7-nanoserver`, `maroilles-nanoserver`, `v1.7.10-nanoserver-sac2016`, `1.7.10-nanoserver-sac2016`, `v1.7-nanoserver-sac2016`, `1.7-nanoserver-sac2016`, `maroilles-nanoserver-sac2016`, `nanoserver`, `nanoserver-sac2016` (*windows/Dockerfile*)](https://github.com/containous/traefik-library-image/blob/07de2d05953a9144a717d66a847991c0fc200cdf/windows/Dockerfile)
+
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/traefik/badge/icon) (`arm64v8/traefik` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/traefik/)
 
 # Quick reference
 

@@ -16,10 +16,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`2.0.20190228`, `2`, `latest` (*Dockerfile*)](https://github.com/aws/amazon-linux-docker-images/blob/19420345fc037699392a82a8f7fc48e34f9836fc/Dockerfile)
--	[`2.0.20190228-with-sources`, `2-with-sources`, `with-sources` (*Dockerfile*)](https://github.com/aws/amazon-linux-docker-images/blob/e40d948ff1fd67b8702d15c3abde42c5f6681438/Dockerfile)
--	[`2018.03.0.20190212`, `2018.03`, `1` (*Dockerfile*)](https://github.com/aws/amazon-linux-docker-images/blob/6ba97eac5a6222140a5b70ae1083da0f1e3f2f18/Dockerfile)
--	[`2018.03.0.20190212-with-sources`, `2018.03-with-sources`, `1-with-sources` (*Dockerfile*)](https://github.com/aws/amazon-linux-docker-images/blob/d53016cae3efb56598428cad7b7699598f29d297/Dockerfile)
+-	[`2.0.20190228`, `2`, `latest` (*Dockerfile*)](https://github.com/aws/amazon-linux-docker-images/blob/b9ed0f98d7a58c78acc8b77a0b0e36640dd32fc5/Dockerfile)
+-	[`2.0.20190228-with-sources`, `2-with-sources`, `with-sources` (*Dockerfile*)](https://github.com/aws/amazon-linux-docker-images/blob/189b3dda6f961a6ffc5456090a8a7f92f13c743c/Dockerfile)
+
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/amazonlinux/badge/icon) (`arm64v8/amazonlinux` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/amazonlinux/)
 
 # Quick reference
 

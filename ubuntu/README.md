@@ -16,11 +16,12 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`18.04`, `bionic-20190307`, `bionic`, `latest` (*bionic/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/bfd753a747344ff1c6838a2c91ff0606e936f0d0/bionic/Dockerfile)
--	[`18.10`, `cosmic-20190311`, `cosmic`, `rolling` (*cosmic/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/bfd753a747344ff1c6838a2c91ff0606e936f0d0/cosmic/Dockerfile)
--	[`19.04`, `disco-20190310`, `disco`, `devel` (*disco/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/bfd753a747344ff1c6838a2c91ff0606e936f0d0/disco/Dockerfile)
--	[`14.04`, `trusty-20190305`, `trusty` (*trusty/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/bfd753a747344ff1c6838a2c91ff0606e936f0d0/trusty/Dockerfile)
--	[`16.04`, `xenial-20190222`, `xenial` (*xenial/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/bfd753a747344ff1c6838a2c91ff0606e936f0d0/xenial/Dockerfile)
+-	[`18.04`, `bionic-20190307`, `bionic`, `latest` (*bionic/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/3d8b79ba2f8a3e7f884fa93ff32cfa8e636758ac/bionic/Dockerfile)
+-	[`18.10`, `cosmic-20190311`, `cosmic`, `rolling` (*cosmic/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/3d8b79ba2f8a3e7f884fa93ff32cfa8e636758ac/cosmic/Dockerfile)
+-	[`19.04`, `disco-20190310`, `disco`, `devel` (*disco/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/3d8b79ba2f8a3e7f884fa93ff32cfa8e636758ac/disco/Dockerfile)
+-	[`16.04`, `xenial-20190222`, `xenial` (*xenial/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/3d8b79ba2f8a3e7f884fa93ff32cfa8e636758ac/xenial/Dockerfile)
+
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/s390x/job/ubuntu/badge/icon) (`s390x/ubuntu` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/s390x/job/ubuntu/)
 
 # Quick reference
 
@@ -64,9 +65,9 @@ Development of Ubuntu is led by UK-based Canonical Ltd., a company owned by Sout
 
 This image is built from official rootfs tarballs provided by Canonical (specifically, https://partner-images.canonical.com/core/).
 
-The `ubuntu:latest` tag points to the "latest LTS", since that's the version recommended for general use. The `ubuntu:rolling` tag points to the latest release (regardless of LTS status).
+The `s390x/ubuntu:latest` tag points to the "latest LTS", since that's the version recommended for general use. The `s390x/ubuntu:rolling` tag points to the latest release (regardless of LTS status).
 
-Along a similar vein, the `ubuntu:devel` tag is an alias for whichever release the "devel" suite on the mirrors currently points to, as determined by the following one-liner: `wget -qO- http://archive.ubuntu.com/ubuntu/dists/devel/Release | awk -F ': ' '$1 == "Codename" { print $2; exit }'`
+Along a similar vein, the `s390x/ubuntu:devel` tag is an alias for whichever release the "devel" suite on the mirrors currently points to, as determined by the following one-liner: `wget -qO- http://archive.ubuntu.com/ubuntu/dists/devel/Release | awk -F ': ' '$1 == "Codename" { print $2; exit }'`
 
 ## Locales
 

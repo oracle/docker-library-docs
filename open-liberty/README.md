@@ -17,23 +17,16 @@ WARNING:
 # Supported tags and respective `Dockerfile` links
 
 -	[`kernel`, `kernel-java8-ibm` (*official/kernel/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/3a154faa4400d550481154f68dc443135e577b67/official/kernel/java8/ibmjava/Dockerfile)
--	[`kernel-java8-ibmsfj` (*official/kernel/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/3a154faa4400d550481154f68dc443135e577b67/official/kernel/java8/ibmsfj/Dockerfile)
 -	[`webProfile8`, `webProfile8-java8-ibm` (*official/webProfile8/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/3a154faa4400d550481154f68dc443135e577b67/official/webProfile8/java8/ibmjava/Dockerfile)
--	[`webProfile8-java8-ibmsfj` (*official/webProfile8/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/3a154faa4400d550481154f68dc443135e577b67/official/webProfile8/java8/ibmsfj/Dockerfile)
 -	[`javaee8`, `javaee8-java8-ibm`, `latest` (*official/javaee8/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/3a154faa4400d550481154f68dc443135e577b67/official/javaee8/java8/ibmjava/Dockerfile)
--	[`javaee8-java8-ibmsfj` (*official/javaee8/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/3a154faa4400d550481154f68dc443135e577b67/official/javaee8/java8/ibmsfj/Dockerfile)
 -	[`microProfile1`, `microProfile1-java8-ibm` (*official/microProfile1/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/3a154faa4400d550481154f68dc443135e577b67/official/microProfile1/java8/ibmjava/Dockerfile)
--	[`microProfile1-java8-ibmsfj` (*official/microProfile1/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/3a154faa4400d550481154f68dc443135e577b67/official/microProfile1/java8/ibmsfj/Dockerfile)
 -	[`microProfile2`, `microProfile2-java8-ibm` (*official/microProfile2/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/3a154faa4400d550481154f68dc443135e577b67/official/microProfile2/java8/ibmjava/Dockerfile)
--	[`microProfile2-java8-ibmsfj` (*official/microProfile2/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/3a154faa4400d550481154f68dc443135e577b67/official/microProfile2/java8/ibmsfj/Dockerfile)
 -	[`springBoot2`, `springBoot2-java8-ibm` (*official/springBoot2/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/3a154faa4400d550481154f68dc443135e577b67/official/springBoot2/java8/ibmjava/Dockerfile)
--	[`springBoot2-java8-ibmsfj` (*official/springBoot2/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/3a154faa4400d550481154f68dc443135e577b67/official/springBoot2/java8/ibmsfj/Dockerfile)
 -	[`webProfile7`, `webProfile7-java8-ibm` (*official/webProfile7/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/3a154faa4400d550481154f68dc443135e577b67/official/webProfile7/java8/ibmjava/Dockerfile)
--	[`webProfile7-java8-ibmsfj` (*official/webProfile7/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/3a154faa4400d550481154f68dc443135e577b67/official/webProfile7/java8/ibmsfj/Dockerfile)
 -	[`javaee7`, `javaee7-java8-ibm` (*official/javaee7/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/3a154faa4400d550481154f68dc443135e577b67/official/javaee7/java8/ibmjava/Dockerfile)
--	[`javaee7-java8-ibmsfj` (*official/javaee7/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/3a154faa4400d550481154f68dc443135e577b67/official/javaee7/java8/ibmsfj/Dockerfile)
 -	[`springBoot1`, `springBoot1-java8-ibm` (*official/springBoot1/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/3a154faa4400d550481154f68dc443135e577b67/official/springBoot1/java8/ibmjava/Dockerfile)
--	[`springBoot1-java8-ibmsfj` (*official/springBoot1/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/3a154faa4400d550481154f68dc443135e577b67/official/springBoot1/java8/ibmsfj/Dockerfile)
+
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/s390x/job/open-liberty/badge/icon) (`s390x/open-liberty` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/s390x/job/open-liberty/)
 
 # Quick reference
 
@@ -115,7 +108,7 @@ There are multiple tags available in this repository.
 The `kernel` image contains the Liberty kernel and can be used as the basis for custom built images that contain only the features required for a specific application. For example, the following Dockerfile starts with this image, copies in the `server.xml` that lists the features required by the application.
 
 ```dockerfile
-FROM open-liberty:kernel
+FROM s390x/open-liberty:kernel
 COPY --chown=1001:0  Sample1.war /config/dropins/
 COPY --chown=1001:0  server.xml /config/
 ```
@@ -133,7 +126,7 @@ The images are designed to support a number of different usage patterns. The fol
 	```console
 	$ docker run -d -p 80:9080 -p 443:9443 \
 	    -v /tmp/DefaultServletEngine/dropins/Sample1.war:/config/dropins/Sample1.war \
-	    open-liberty:webProfile8
+	    s390x/open-liberty:webProfile8
 	```
 
 	When the server is started, you can browse to http://localhost/Sample1/SimpleServlet on the Docker host.
@@ -143,13 +136,13 @@ The images are designed to support a number of different usage patterns. The fol
 	```console
 	$ docker run -d -p 80:9080 \
 	  -v /tmp/DefaultServletEngine:/config \
-	  open-liberty:webProfile8-sfj
+	  s390x/open-liberty:webProfile8-sfj
 	```
 
 3.	You can also build an application layer on top of this image by using either the default server configuration or a new server configuration. In this example, we have copied the `Sample1.war` from `/tmp/DefaultServletEngine/dropins` to the same directory as the following Dockerfile.
 
 	```dockerfile
-	FROM open-liberty:webProfile8
+	FROM s390x/open-liberty:webProfile8
 	COPY Sample1.war /config/dropins/
 	```
 
@@ -165,7 +158,7 @@ The images are designed to support a number of different usage patterns. The fol
 	Build and run the data volume container:
 
 	```dockerfile
-	FROM open-liberty:webProfile8
+	FROM s390x/open-liberty:webProfile8
 	COPY DefaultServletEngine /config
 	```
 
@@ -179,7 +172,7 @@ The images are designed to support a number of different usage patterns. The fol
 
 	```console
 	$ docker run -d -p 80:9080 \
-	  --volumes-from app open-liberty:webProfile8
+	  --volumes-from app s390x/open-liberty:webProfile8
 	```
 
 # Using `springBoot` images
@@ -191,13 +184,13 @@ The `springBoot` images introduce capabilities specific to the support of Spring
 	```console
 	$ docker run -d -p 8080:9080 \
 	    -v /tmp/hellospringboot.jar:/config/dropins/spring/hellospringboot.jar \
-	    open-liberty:springBoot2
+	    s390x/open-liberty:springBoot2
 	```
 
 	Similarly, you can create a Spring Boot application layer over this image by adding the application JAR to the `dropins/spring` directory. In this example we copied `hellospringboot.jar` from `/tmp` to the same directory containing the following Dockerfile.
 
 	```dockerfile
-	FROM open-liberty:springBoot2
+	FROM s390x/open-liberty:springBoot2
 	COPY hellospringboot.jar /config/dropins/spring/
 	```
 
@@ -225,19 +218,19 @@ The `springBoot` images introduce capabilities specific to the support of Spring
 	$ docker run -d -p 8080:9080 \
 	    -v /tmp/thinhellospringboot.jar:/config/dropins/spring/thinhellospringboot.jar \
 	    -v /tmp/lib.index.cache:/lib.index.cache \
-	    open-liberty:springBoot2
+	    s390x/open-liberty:springBoot2
 	```
 
 	Similarly, you can use the `springBootUtility` command to create thin application and library cache layers over a `springBoot` image. The following example uses docker staging to efficiently build an image that deploys a fat Spring Boot application as two layers containing a thin application and a library cache.
 
 	```dockerfile
-	FROM open-liberty:springBoot2 as staging
+	FROM s390x/open-liberty:springBoot2 as staging
 	COPY hellospringboot.jar /staging/myFatApp.jar
 	RUN springBootUtility thin \
 	   --sourceAppPath=/staging/myFatApp.jar \
 	   --targetThinAppPath=/staging/myThinApp.jar \
 	   --targetLibCachePath=/staging/lib.index.cache
-	FROM open-liberty:springBoot2
+	FROM s390x/open-liberty:springBoot2
 	COPY --from=staging /staging/lib.index.cache /lib.index.cache
 	COPY --from=staging /staging/myThinApp.jar /config/dropins/spring/myThinApp.jar
 	```
@@ -275,7 +268,7 @@ Or, create a named data volume container that exposes a volume at the location o
 
 ```console
 docker run -v /opt/ol/wlp//output/.classCache \
-    --name classcache open-liberty true
+    --name classcache s390x/open-liberty true
 ```
 
 Then, run the Open Liberty image with the volumes from the data volume container classcache mounted as follows:
@@ -291,7 +284,7 @@ Liberty writes to two different directories when running: `/opt/ol/wlp//output` 
 ```console
 docker run -d -p 80:9080 -p 443:9443 \
     --tmpfs /opt/ol/wlp//output --tmpfs /logs -v /config --read-only \
-    open-liberty:webProfile8
+    s390x/open-liberty:webProfile8
 ```
 
 # Relationship between Open Liberty and WebSphere Liberty

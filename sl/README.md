@@ -19,6 +19,8 @@ WARNING:
 -	[`7`, `latest` (*sl7/Dockerfile*)](https://github.com/scientificlinux/sl-docker/blob/a0bb8478a146aa95c67d4b772b05ae56133347f9/sl7/Dockerfile)
 -	[`6` (*sl6/Dockerfile*)](https://github.com/scientificlinux/sl-docker/blob/b4a7d173c8fd026c79fe2f2cb32f4dd65bbc2c99/sl6/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/sl/badge/icon) (`amd64/sl` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/sl/)
+
 # Quick reference
 
 -	**Where to get help**:  
@@ -86,9 +88,9 @@ Recent Docker versions support the [overlayfs](https://docs.docker.com/engine/us
 You can try out the containers via:
 
 ```console
-$ docker pull sl
-$ docker run -it sl:6 cat /etc/redhat-release
-$ docker run -it sl:7 cat /etc/redhat-release
+$ docker pull amd64/sl
+$ docker run -it amd64/sl:6 cat /etc/redhat-release
+$ docker run -it amd64/sl:7 cat /etc/redhat-release
 ```
 
 ## Enabling systemd in SL7
@@ -99,7 +101,7 @@ In order to run a container with systemd, you will need to mount the cgroups vol
 
 ```Dockerfile
 # Example SL7 systemd Dockerfile
-FROM sl:7
+FROM amd64/sl:7
 ENV container docker
 ### This example enables httpd via systemd within the container
 RUN yum -y install httpd && yum clean all && systemctl enable httpd.service

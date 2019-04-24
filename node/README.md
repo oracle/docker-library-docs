@@ -28,6 +28,9 @@ WARNING:
 -	[`6.17.1-onbuild`, `6.17-onbuild`, `6-onbuild`, `boron-onbuild` (*6/onbuild/Dockerfile*)](https://github.com/nodejs/docker-node/blob/53fd280cdd46a4caf63b82f8c269dfbb84895546/6/onbuild/Dockerfile)
 -	[`6.17.1-stretch`, `6.17-stretch`, `6-stretch`, `boron-stretch`, `6.17.1`, `6.17`, `6`, `boron` (*6/stretch/Dockerfile*)](https://github.com/nodejs/docker-node/blob/53fd280cdd46a4caf63b82f8c269dfbb84895546/6/stretch/Dockerfile)
 -	[`6.17.1-stretch-slim`, `6.17-stretch-slim`, `6-stretch-slim`, `boron-stretch-slim`, `6.17.1-slim`, `6.17-slim`, `6-slim`, `boron-slim` (*6/stretch-slim/Dockerfile*)](https://github.com/nodejs/docker-node/blob/53fd280cdd46a4caf63b82f8c269dfbb84895546/6/stretch-slim/Dockerfile)
+-	[`12.0.0-alpine`, `12.0-alpine` (*12/alpine/Dockerfile*)](https://github.com/nodejs/docker-node/blob/29e4ef051ed7a0d55554fc6df53d1be02089e307/12/alpine/Dockerfile)
+-	[`12.0.0-stretch`, `12.0-stretch`, `12.0.0`, `12.0` (*12/stretch/Dockerfile*)](https://github.com/nodejs/docker-node/blob/29e4ef051ed7a0d55554fc6df53d1be02089e307/12/stretch/Dockerfile)
+-	[`12.0.0-stretch-slim`, `12.0-stretch-slim`, `12.0.0-slim`, `12.0-slim` (*12/stretch-slim/Dockerfile*)](https://github.com/nodejs/docker-node/blob/29e4ef051ed7a0d55554fc6df53d1be02089e307/12/stretch-slim/Dockerfile)
 -	[`11.14.0-alpine`, `11.14-alpine`, `11-alpine`, `current-alpine`, `alpine` (*11/alpine/Dockerfile*)](https://github.com/nodejs/docker-node/blob/5a6a5e91999358c5b04fddd6c22a9a4eb0bf3fbf/11/alpine/Dockerfile)
 -	[`11.14.0-stretch`, `11.14-stretch`, `11-stretch`, `current-stretch`, `stretch`, `11.14.0`, `11.14`, `11`, `current`, `latest` (*11/stretch/Dockerfile*)](https://github.com/nodejs/docker-node/blob/974b70c72e027365003bc1d6e47c8cf6ec46a54d/11/stretch/Dockerfile)
 -	[`11.14.0-stretch-slim`, `11.14-stretch-slim`, `11-stretch-slim`, `current-stretch-slim`, `stretch-slim`, `11.14.0-slim`, `11.14-slim`, `11-slim`, `current-slim`, `slim` (*11/stretch-slim/Dockerfile*)](https://github.com/nodejs/docker-node/blob/974b70c72e027365003bc1d6e47c8cf6ec46a54d/11/stretch-slim/Dockerfile)
@@ -36,8 +39,10 @@ WARNING:
 -	[`10.15.3-alpine`, `10.15-alpine`, `10-alpine`, `dubnium-alpine`, `lts-alpine` (*10/alpine/Dockerfile*)](https://github.com/nodejs/docker-node/blob/5a6a5e91999358c5b04fddd6c22a9a4eb0bf3fbf/10/alpine/Dockerfile)
 -	[`10.15.3-stretch`, `10.15-stretch`, `10-stretch`, `dubnium-stretch`, `lts-stretch`, `10.15.3`, `10.15`, `10`, `dubnium`, `lts` (*10/stretch/Dockerfile*)](https://github.com/nodejs/docker-node/blob/170ed2092d4925971f9cd3ad5dfc416e820f90fd/10/stretch/Dockerfile)
 -	[`10.15.3-stretch-slim`, `10.15-stretch-slim`, `10-stretch-slim`, `dubnium-stretch-slim`, `lts-stretch-slim`, `10.15.3-slim`, `10.15-slim`, `10-slim`, `dubnium-slim`, `lts-slim` (*10/stretch-slim/Dockerfile*)](https://github.com/nodejs/docker-node/blob/170ed2092d4925971f9cd3ad5dfc416e820f90fd/10/stretch-slim/Dockerfile)
--	[`chakracore-8.11.1`, `chakracore-8.11`, `chakracore-8` (*chakracore/8/Dockerfile*)](https://github.com/nodejs/docker-node/blob/39bb3fd2a62d82cc34a917e9d70c26797bd5fc98/chakracore/8/Dockerfile)
--	[`chakracore-10.13.0`, `chakracore-10.13`, `chakracore-10`, `chakracore` (*chakracore/10/Dockerfile*)](https://github.com/nodejs/docker-node/blob/69c8a5f448f46f9e34d7fb577eca79ba01f6864d/chakracore/10/Dockerfile)
+-	[`chakracore-8.11.1`, `chakracore-8.11`, `chakracore-8` (*chakracore/8/Dockerfile*)](https://github.com/nodejs/docker-node/blob/6998705ad6ced12fe5913cb23142367eb46c4416/chakracore/8/Dockerfile)
+-	[`chakracore-10.13.0`, `chakracore-10.13`, `chakracore-10`, `chakracore` (*chakracore/10/Dockerfile*)](https://github.com/nodejs/docker-node/blob/6998705ad6ced12fe5913cb23142367eb46c4416/chakracore/10/Dockerfile)
+
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/node/badge/icon) (`amd64/node` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/node/)
 
 # Quick reference
 
@@ -85,9 +90,9 @@ See [How To Use This Image](https://github.com/nodejs/docker-node/blob/master/RE
 
 # Image Variants
 
-The `node` images come in many flavors, each designed for a specific use case.
+The `amd64/node` images come in many flavors, each designed for a specific use case.
 
-## `node:<version>`
+## `amd64/node:<version>`
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
@@ -95,11 +100,11 @@ This tag is based off of [`buildpack-deps`](https://hub.docker.com/_/buildpack-d
 
 Some of these tags may have names like jessie or stretch in them. These are the suite code names for releases of [Debian](https://wiki.debian.org/DebianReleases) and indicate which release the image is based on.
 
-## `node:<version>-slim`
+## `amd64/node:<version>-slim`
 
-This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `node`. Unless you are working in an environment where *only* the `node` image will be deployed and you have space constraints, we highly recommend using the default image of this repository.
+This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `amd64/node`. Unless you are working in an environment where *only* the `amd64/node` image will be deployed and you have space constraints, we highly recommend using the default image of this repository.
 
-## `node:<version>-alpine`
+## `amd64/node:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
@@ -107,7 +112,7 @@ This variant is highly recommended when final image size being as small as possi
 
 To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 
-## `node:<version>-onbuild`
+## `amd64/node:<version>-onbuild`
 
 The `ONBUILD` image variants are deprecated, and their usage is discouraged. For more details, see [docker-library/official-images#2076](https://github.com/docker-library/official-images/issues/2076).
 

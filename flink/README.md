@@ -41,6 +41,8 @@ WARNING:
 -	[`1.8.0-scala_2.11-alpine`, `1.8-scala_2.11-alpine`, `scala_2.11-alpine` (*1.8/scala_2.11-alpine/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/8808e12164f02f0b0e84c0f06d9fb0aa4ad19b60/1.8/scala_2.11-alpine/Dockerfile)
 -	[`1.8.0-scala_2.12-alpine`, `1.8-scala_2.12-alpine`, `scala_2.12-alpine`, `1.8.0-alpine`, `1.8-alpine`, `alpine` (*1.8/scala_2.12-alpine/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/8808e12164f02f0b0e84c0f06d9fb0aa4ad19b60/1.8/scala_2.12-alpine/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/flink/badge/icon) (`ppc64le/flink` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/flink/)
+
 # Quick reference
 
 -	**Where to get help**:  
@@ -90,13 +92,13 @@ Starting with Flink 1.5, images without "hadoop" in the tag are the "Hadoop-free
 You can run a JobManager (master).
 
 ```console
-$ docker run --name flink_jobmanager -d -t flink jobmanager
+$ docker run --name flink_jobmanager -d -t ppc64le/flink jobmanager
 ```
 
 You can also run a TaskManager (worker). Notice that workers need to register with the JobManager directly or via ZooKeeper so the master starts to send them tasks to execute.
 
 ```console
-$ docker run --name flink_taskmanager -d -t flink taskmanager
+$ docker run --name flink_taskmanager -d -t ppc64le/flink taskmanager
 ```
 
 ## Running a cluster using Docker Compose
@@ -155,13 +157,13 @@ This repository is maintained by members of the Apache Flink community.
 
 # Image Variants
 
-The `flink` images come in many flavors, each designed for a specific use case.
+The `ppc64le/flink` images come in many flavors, each designed for a specific use case.
 
-## `flink:<version>`
+## `ppc64le/flink:<version>`
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `flink:<version>-alpine`
+## `ppc64le/flink:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 

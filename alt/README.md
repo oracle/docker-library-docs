@@ -16,8 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`p8`, `latest` (*x86_64//Dockerfile*)](https://github.com/alt-cloud/docker-brew-alt/blob/984ea21a59b0e8328504db1ec8dbb81dc74d0db1/x86_64//Dockerfile)
--	[`sisyphus` (*x86_64//Dockerfile*)](https://github.com/alt-cloud/docker-brew-alt/blob/f01e2c340efea120a79c0bfaffcdceae2b8b2119/x86_64//Dockerfile)
+**No supported tags found!**
+
+It is very likely that `alt` does not support the currently selected architecture (`arm32v7`).
 
 # Quick reference
 
@@ -71,7 +72,7 @@ As said above, Sisyphus is a frequently updated repository mainly designed for d
 
 # About this image
 
-The `alt:latest` tag will always point the latest stable release (which is, at the time of this writing, `alt:p8`).
+The `arm32v7/alt:latest` tag will always point the latest stable release (which is, at the time of this writing, `arm32v7/alt:p8`).
 
 ## How It's Made
 

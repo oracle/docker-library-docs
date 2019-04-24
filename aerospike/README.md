@@ -16,9 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`4.5.2.1`, `latest` (*Dockerfile*)](https://github.com/aerospike/aerospike-server.docker/blob/c5c6355c81b03b1e7cf6d817dfc053baabd4b7b6/Dockerfile)
--	[`4.4.0.14` (*Dockerfile*)](https://github.com/aerospike/aerospike-server.docker/blob/7b3f348654843a427d318075ac54c696351b0ec1/Dockerfile)
--	[`4.5.1.6` (*Dockerfile*)](https://github.com/aerospike/aerospike-server.docker/blob/9353328db38a87b16020ba4b180d900cc8cc0486/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `aerospike` does not support the currently selected architecture (`arm32v7`).
 
 # Quick reference
 
@@ -61,7 +61,7 @@ Documentation for Aerospike is available at [http://aerospike.com/docs](https://
 The following will run `asd` with all the exposed ports forwarded to the host machine.
 
 ```console
-$ docker run -d --name aerospike -p 3000:3000 -p 3001:3001 -p 3002:3002 -p 3003:3003 aerospike
+$ docker run -d --name aerospike -p 3000:3000 -p 3001:3001 -p 3002:3002 -p 3003:3003 arm32v7/aerospike
 ```
 
 **NOTE** Although this is the simplest method to getting Aerospike up and running, but it is not the preferred method. To properly run the container, please specify a **custom configuration** with the **access-address** defined.
@@ -72,7 +72,7 @@ By default, `asd` will use the configuration file at `/etc/aerospike/aerospike.c
 
 	-v <DIRECTORY>:/opt/aerospike/etc
 
-Where `<DIRECTORY>` is the path to a directory containing your custom aerospike.conf file. Next, you will want to tell `asd` to use the configuration file that was just mounted by using the `--config-file` option for `aerospike`:
+Where `<DIRECTORY>` is the path to a directory containing your custom aerospike.conf file. Next, you will want to tell `asd` to use the configuration file that was just mounted by using the `--config-file` option for `arm32v7/aerospike`:
 
 	--config-file /opt/aerospike/etc/aerospike.conf
 
@@ -81,7 +81,7 @@ This will tell `asd` to use the config file at `/opt/aerospike/etc/aerospike.con
 A full example:
 
 ```console
-$ docker run -d -v <DIRECTORY>:/opt/aerospike/etc --name aerospike -p 3000:3000 -p 3001:3001 -p 3002:3002 -p 3003:3003 aerospike asd --foreground --config-file /opt/aerospike/etc/aerospike.conf
+$ docker run -d -v <DIRECTORY>:/opt/aerospike/etc --name aerospike -p 3000:3000 -p 3001:3001 -p 3002:3002 -p 3003:3003 arm32v7/aerospike asd --foreground --config-file /opt/aerospike/etc/aerospike.conf
 ```
 
 ### access-address Configuration
@@ -109,7 +109,7 @@ Where `<DIRECTORY>` is the path to a directory containing your data files.
 A full example:
 
 ```console
-$ docker run -d -v <DIRECTORY>:/opt/aerospike/data --name aerospike -p 3000:3000 -p 3001:3001 -p 3002:3002 -p 3003:3003 aerospike
+$ docker run -d -v <DIRECTORY>:/opt/aerospike/data --name aerospike -p 3000:3000 -p 3001:3001 -p 3002:3002 -p 3003:3003 arm32v7/aerospike
 ```
 
 ## Clustering
